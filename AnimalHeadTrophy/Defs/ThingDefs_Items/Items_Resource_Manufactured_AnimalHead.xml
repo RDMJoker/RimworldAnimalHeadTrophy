@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef Name="SpecialResourceBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+	<tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+	  <li Class="CompProperties_Ingredients" />
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+ <ThingDef ParentName="SpecialResourceBase">
+    <defName>AnimalHead</defName>
+    <label>animal head</label>
+    <description>An animal head carefully removed from it's carcass so it can be preserved and mounted on a pedestal at a crafting table.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalHead</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+	<useHitPoints>true</useHitPoints>
+    <statBases>
+		<MaxHitPoints>50</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<Beauty>0</Beauty>
+		<Mass>0.44</Mass>
+		<DeteriorationRate>5</DeteriorationRate>
+		<MarketValue>0</MarketValue>
+	</statBases>	
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>1</stackLimit>
+    <smallVolume>false</smallVolume>
+    <deepCommonality>4</deepCommonality>
+    <deepCountPerPortion>35</deepCountPerPortion>
+    <deepLumpSizeRange>
+      <min>2</min>
+      <max>10</max>
+    </deepLumpSizeRange>
+    <stuffProps>
+      <categories>
+        <li>SpecialArtAnimalHead</li>
+      </categories>
+      <statFactors>
+        <Beauty>5</Beauty>
+      </statFactors>
+      <smeltable>false</smeltable>
+    </stuffProps>
+  </ThingDef>
+</Defs>

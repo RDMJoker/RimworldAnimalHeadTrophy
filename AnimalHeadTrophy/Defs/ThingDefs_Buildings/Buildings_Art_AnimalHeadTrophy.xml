@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase" Name="SculptureBaseAnimalHead" Abstract="True">
+    <thingClass>Building_Art</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <useHitPoints>true</useHitPoints>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsArt</li>
+    </thingCategories>
+    <statBases>
+		<Flammability>1.0</Flammability>
+		<SellPriceFactor>1.10</SellPriceFactor>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtSculpture</nameMaker>
+        <!-- <descriptionMaker>ArtDescription_Sculpture</descriptionMaker> -->
+		<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+    <ThingDef ParentName="SculptureBaseAnimalHead">
+    <defName>AnimalHeadMounted</defName>
+    <label>mounted</label>
+    <description>A wonderfully preserved animal head trophy.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Art/AnimalHeadTrophy</texPath>
+    </graphicData>
+    <fillPercent>0.35</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Mass>3</Mass>
+      <Beauty>10</Beauty>
+      <WorkToMake>55500</WorkToMake>
+    </statBases>
+	<stuffCategories>
+      <li>SpecialArtAnimalHead</li>
+    </stuffCategories>
+	<costStuffCount>1</costStuffCount>
+  </ThingDef>
+  
+</Defs>

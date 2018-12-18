@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+
+<RecipeDef>
+
+<defName>AnimalHead</defName>
+
+<label>Seperate animal head from corpse</label>
+
+<description>Carefully remove the animal head from the carcas so it can be wall mounted on a pedestal.</description>
+
+<jobString>Producing an animal head</jobString>
+
+<workSpeedStat>CookSpeed</workSpeedStat>
+
+<workSkill>Cooking</workSkill>
+
+<allowMixingIngredients>false</allowMixingIngredients>
+
+<workAmount>500</workAmount>
+
+<targetCountAdjustment>1</targetCountAdjustment>
+
+
+<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+</ingredients>
+
+<fixedIngredientFilter>
+	<categories>
+		<li>Corpses</li>
+	</categories>
+	<disallowedCategories>
+		<li>CorpsesHumanlike</li>
+		<li>CorpsesMechanoid</li>
+		<li>CorpsesInsect</li>
+	</disallowedCategories>
+	<specialFiltersToDisallow>
+		<li>AllowRotten</li>
+    </specialFiltersToDisallow>
+</fixedIngredientFilter>
+<defaultIngredientFilter>
+	<categories>
+		<li>CorpsesAnimal</li>
+	</categories>
+</defaultIngredientFilter>
+	
+<products>
+
+<AnimalHead>1</AnimalHead>
+
+</products>
+
+<specialProducts>
+	<li>Butchery</li>
+</specialProducts>
+
+<recipeUsers>
+
+<li>TableButcher</li>
+<li>ButcherSpot</li>
+
+</recipeUsers>
+
+</RecipeDef>
+
+</Defs>

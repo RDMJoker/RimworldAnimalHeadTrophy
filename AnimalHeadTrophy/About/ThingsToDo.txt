@@ -1,0 +1,6 @@
+Update the filter in the butchers table to allow only deer/doe/buck
+
+Need to create art/assets and permit more than just the white head
+
+Need to allow the butchers table to show job duration (work left)
+
